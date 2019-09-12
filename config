@@ -1,0 +1,4 @@
+NAME=piezo97
+PORT=4061
+USER=softioc
+HOST=xf10idb-ioc1

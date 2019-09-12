@@ -1,0 +1,16 @@
+epicsEnvSet("ARCH",	"linux-x86_64")
+epicsEnvSet("TOP",	"${PWD}")	# defined here not in  unique.cmd
+epicsEnvSet("SUPPORT", 	"$(SUPPORT_DIR)")
+
+epicsEnvSet("ASYN",             "$(SUPPORT)/asyn")
+epicsEnvSet("AUTOSAVE",         "$(SUPPORT)/autosave")
+epicsEnvSet("BUSY",             "$(SUPPORT)/busy")
+epicsEnvSet("CALC",             "$(SUPPORT)/calc")
+epicsEnvSet("SNCSEQ",           "$(SUPPORT)/seq")
+epicsEnvSet("SSCAN",            "$(SUPPORT)/sscan")
+epicsEnvSet("DEVIOCSTATS",      "$(SUPPORT)/iocStats")
+epicsEnvSet("EPICS_BASE",       "$(SUPPORT)/base")
+epicsEnvSet("MOTOR",            "$(SUPPORT)/motor")
+epicsEnvSet("IPAC",             "$(SUPPORT)/ipac")
+
+
