@@ -15,7 +15,7 @@ dbLoadTemplate("motor.substitutions")
 # Create simulated motors: ( start card , start axis , low limit, high limit, home posn, # cards, # axes to setup)
 motorSimCreate( 0, 0, -32000, 32000, 0, 1, 4 )
 # Setup the Asyn layer (portname, low-level driver drvet name, card, number of axes on card)
-drvAsynMotorConfigure("$(PORT)", "$(IOCNAME)", 0, 4)
+drvAsynMotorConfigure("$(PORT)", "motorSim", 0, 4)
 
 
 ## motorUtil (allstop & alldone)
