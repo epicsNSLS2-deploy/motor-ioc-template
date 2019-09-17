@@ -35,27 +35,26 @@ dbLoadTemplate("newfocus.asyn.motor.substitutions")
 dbLoadRecords("${ASYN}/db/asynRecord.db", "P=$(MC_PREFIX),R=Asyn,PORT=$(PORT),ADDR=,OMAX=80,IMAX=80")
 
 set_requestfile_path("$(MOTOR)/motorApp/Db")
-#set_requestfile_path("$(MOTOR)/iocs/prosilicaIOC/iocBoot/iocProsilica")
 
 ## autosave/restore machinery
-#!save_restoreSet_Debug(0)
-#!save_restoreSet_IncompleteSetsOk(1)
-#!save_restoreSet_DatedBackupFiles(1)
+#save_restoreSet_Debug(0)
+#save_restoreSet_IncompleteSetsOk(1)
+#save_restoreSet_DatedBackupFiles(1)
 
-#!set_savefile_path("${TOP}/as","/save")
-#!set_requestfile_path("${TOP}/as","/req")
+#set_savefile_path("${TOP}/as","/save")
+#set_requestfile_path("${TOP}/as","/req")
 
-#!set_pass0_restoreFile("info_positions.sav")
-#!set_pass0_restoreFile("info_settings.sav")
-#!set_pass1_restoreFile("info_settings.sav")
+#set_pass0_restoreFile("info_positions.sav")
+#set_pass0_restoreFile("info_settings.sav")
+#set_pass1_restoreFile("info_settings.sav")
 
 iocInit()
 
 ## more autosave/restore machinery
-#!cd ${TOP}/as/req
-#!makeAutosaveFiles()
-#!create_monitor_set("info_positions.req", 5 , "")
-#!create_monitor_set("info_settings.req", 15 , "")
+#cd ${TOP}/as/req
+#makeAutosaveFiles()
+#create_monitor_set("info_positions.req", 5 , "")
+#create_monitor_set("info_settings.req", 15 , "")
 
 cd ${TOP}
 dbl > ./records.dbl
